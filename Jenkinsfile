@@ -1,10 +1,14 @@
 pipeline {
-    agent any
-    stages {
-        stage ("Hello"){
-            steps {
-                echo ("Hello World")
-            }
-        }
-    }
+	agent {
+		node {
+			label "linux"
+		}
+	}
+	stages {
+		stage ("Hello"){
+			steps {
+				echo ("Hello World")
+			}
+		}
+	}
 }
